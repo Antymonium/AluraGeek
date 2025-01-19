@@ -1,0 +1,46 @@
+{
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "Game Boy Classic",
+      "valor": "60,00",
+      "imagem": "https://images.unsplash.com/photo-1531390770335-d94a0dacd992?q=80&w=1378&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "2",
+      "nome": "Stormtrooper",
+      "valor": "40,00",
+      "imagem": "https://images.unsplash.com/photo-1514302240736-b1fee5985889?q=80&w=1373&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 3,
+      "nome": "Xadrez",
+      "valor": "40",
+      "imagem": "https://plus.unsplash.com/premium_photo-1672855191351-e26398f27e5f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 3,
+      "nome": "Xadrez",
+      "valor": "40",
+      "imagem": "https://plus.unsplash.com/premium_photo-1672855191351-e26398f27e5f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 3,
+      "nome": "Xadrez",
+      "valor": "40",
+      "imagem": "https://plus.unsplash.com/premium_photo-1672855191351-e26398f27e5f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 4,
+      "nome": "ssdds",
+      "valor": "sdsd",
+      "imagem": "sdsd"
+    },
+    {
+      "id": 4,
+      "nome": "ssdds",
+      "valor": "sdsd",
+      "imagem": "sdsd"
+    }
+  ]
+}

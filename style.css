@@ -1,0 +1,353 @@
+/* Reset básico */
+html, body, h1, h2, p, img, button, input, header, main, section {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: #FFFFFF; /* Fundo global */
+    color: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden; /* Previne rolagem horizontal indesejada */
+    width: 100%;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    width: 100%;
+    background: #5300C8;
+    box-shadow: 0px 7px 0.9px rgba(0, 0, 0, 0.25);
+}
+
+header .logo {
+    width: 138px;
+    height: 56px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 24px;
+    color: #E5E5E5;
+}
+
+/* Main */
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1440px;
+    padding-top: 7%;
+    gap: 20px;
+}
+
+/* Área esquerda - Meus Produtos */
+.area-esquerda {
+    flex: 2;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: auto;
+    height: 600px;
+}
+
+/* Estilo dos títulos */
+.area-esquerda h2, .area-direita h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 22px; /* Ajustado para 22px */
+    color: #000000;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    padding: 40px; /* Adicionado padding de 40px ao redor */
+}
+
+.produtos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.produto-card {
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+
+    width: 196px;
+    height: 258px;
+
+    background: #5D04D9;
+    border: 3px solid #000000;
+    box-shadow: -5px 6px 3.3px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Imagem do produto */
+.produto-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px; /* Pequeno arredondamento */
+    object-fit: cover;
+    background-color: #000000; /* Fundo para dar contraste */
+}
+
+/* Nome do produto */
+.produto-card p:first-of-type {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin: 0;
+    text-align: center;
+}
+
+/* Preço e lixeira */
+.produto-card .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Preço */
+.produto-card .price {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    padding-left: 10px; /* Alinha à esquerda */
+}
+
+/* Botão da lixeira */
+.produto-card .btn-lixeira {
+    background: none; /* Sem fundo no botão */
+    border: none; /* Remove borda */
+    cursor: pointer;
+    padding: 0; /* Remove qualquer padding */
+    margin: 0; /* Remove margens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagem do ícone da lixeira */
+.produto-card .btn-lixeira img {
+    width: 22px; /* Tamanho da lixeira */
+    height: 22px;
+    display: block; /* Remove espaçamento extra */
+    background: none; /* Garante sem fundo */
+}
+
+
+/* Opção de Desfazer após exclusão */
+
+.desfazer-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #5300C8;
+    color: #FFFFFF;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.desfazer-container p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.desfazer-container .btn-desfazer,
+.desfazer-container .btn-cancelar {
+    cursor: pointer;
+    background-color: #FFFFFF;
+    color: #5300C8;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.desfazer-container .btn-cancelar {
+    background-color: transparent;
+    color: #FFFFFF;
+}
+
+/* Fade-out para o botão "Desfazer" */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.8s ease; /* Aumentado para 0.8s */
+}
+
+/* Área direita - Adicionar Produto */
+.area-direita {
+    flex: 1;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    height: 600px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-form {
+    width: 100%;
+    height: 55px;
+    background: #FFFFFF;
+    border: 3px solid #03318C;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 13px;
+}
+
+.btn-guardar, .btn-limpar {
+    width: 188px;
+    height: 55px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-family: 'IBM Plex Mono', monospace;
+    cursor: pointer;
+}
+
+.btn-guardar {
+    background-color: #03318C;
+    color: #FFFFFF;
+    border: none;
+}
+
+.btn-limpar {
+    background-color: #FFFFFF;
+    color: #03318C;
+    border: 3px solid #03318C;
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    background-color: #5300C8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.footer-content {
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.footer-header {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 10px;
+}
+
+.footer-logo {
+    width: 120px;
+    height: 40px;
+    display: block; 
+}
+
+footer h1 {
+    font-size: 24px;
+    color: #FFFFFF;
+    margin: 0;
+    display: inline-block;
+}
+
+footer p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    margin: 3px 0; 
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+footer p:last-of-type {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    margin: 3px 0;
+    color: #FFFFFF;
+    font-weight: 200;
+}
+
+@media (max-width: 768px) {
+    /* Ajusta o layout principal para coluna */
+    main {
+        flex-direction: column;
+        align-items: center; 
+        gap: 20px;
+    }
+
+    /* Área esquerda (Meus Produtos) */
+    .area-esquerda {
+        width: 100%;
+        height: auto; 
+        padding: 10px; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    /* Área direita (Adicionar Produto) */
+    .area-direita {
+        width: 100%; /* Ocupa toda a largura */
+        height: auto; /* Ajusta altura automaticamente */
+        padding: 10px; /* Reduz espaçamento interno */
+    }
+
+    /* Ajusta o grid dos produtos para 1 coluna e centraliza */
+    .produtos-container {
+        grid-template-columns: 1fr; /* 1 coluna para centralizar */
+        gap: 15px;
+        justify-items: center;
+    }
+
+    /* Ajusta os botões no formulário */
+    .form-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-guardar,
+    .btn-limpar {
+        width: 100%;
+    }
+}

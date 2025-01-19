@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge AluraGeek</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400;500&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="assets/coracoes.svg" alt="Corações" class="logo">
+        <h1>AluraGeek</h1>
+    </header>
+
+    <main>
+        <section class="area-esquerda">
+            <h2>MEUS PRODUTOS:</h2>
+            <div class="produtos-container">
+                <!-- Mensagem de vazio -->
+                <p class="empty-message" style="display: none;">Nenhum produto foi adicionado.</p>
+
+                <!-- Exemplo de Card de Produto -->
+                <div class="produto-card">
+                    <img src="assets/gameboy.jpg" alt="Game Boy Classic">
+                    <p>Game Boy Classic</p>
+                    <div class="card-footer">
+                        <p class="price">$ 60,00</p>
+                        <button class="btn-lixeira">
+                            <img src="assets/lixeira.svg" alt="Excluir">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="produto-card">
+                    <img src="assets/stormtrooper.jpg" alt="Stormtrooper">
+                    <p>Stormtrooper</p>
+                    <div class="card-footer">
+                        <p class="price">$ 50,00</p>
+                        <button class="btn-lixeira">
+                            <img src="assets/lixeira.svg" alt="Excluir">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="area-direita">
+            <h2>ADICIONAR PRODUTO:</h2>
+            <form>
+                <input type="text" placeholder="nome..." class="input-form">
+                <input type="text" placeholder="valor..." class="input-form">
+                <input type="text" placeholder="imagem..." class="input-form">
+                <div class="form-buttons">
+                    <button type="submit" class="btn-guardar">Guardar</button>
+                    <button type="reset" class="btn-limpar">Limpar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-header">
+                <img src="assets/coracoes.svg" alt="Corações" class="footer-logo">
+                <h1>AluraGeek</h1>
+            </div>
+            <p>DESENVOLVIDO POR THAÍSSA KLOTZ</p>
+            <p>ALURA LATAM - 2025</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./js/script.js"></script>
+</body>
+</html>
